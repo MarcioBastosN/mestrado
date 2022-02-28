@@ -85,7 +85,12 @@ class PontosController extends Controller
         //
     }
 
-    public function alterar_todos(){
+    public function editAll(){
+
+        $pontos = Pontos::all();
+        foreach($pontos as $ponto){
+            $ponto->update(["score" => is_null($ponto->relacao->nivel) ? 0 : $ponto->relacao->nivel->score]);
+        }
 
         return redirect()->route("pontos.index");
     }
