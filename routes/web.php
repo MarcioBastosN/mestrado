@@ -3,6 +3,7 @@
 use App\Http\Controllers\NivelRelacaoController;
 use App\Http\Controllers\PontosController;
 use App\Http\Controllers\RelacaoPontosController;
+use App\Http\Controllers\TabelaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,4 @@ Route::post('pontos/editar', [PontosController::class, "editAll"])->name("pontos
 Route::resource('relacoes_pontos', RelacaoPontosController::class);
 Route::post('relacoes_pontos/loadData', [RelacaoPontosController::class, 'loadData'])->name("relacoes_pontos.load");
 Route::resource('nivel', NivelRelacaoController::class);
+Route::get('tabela', [TabelaController::class, 'index'])->name('tabela');

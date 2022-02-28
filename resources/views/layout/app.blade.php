@@ -20,7 +20,7 @@
             <a class="nav-item nav-link active" href="{{ route('pontos.index') }}">Pontos</a>
             <a class="nav-item nav-link" href="{{ route('relacoes_pontos.index') }}">Classificação</a>
             <a class="nav-item nav-link" href="{{ route('nivel.index') }}">Niveis</a>
-            <a class="nav-item nav-link" href="{{ route('inicio') }}">Tabela</a>
+            <a class="nav-item nav-link" href="{{ route('tabela') }}">Tabela</a>
           </div>
         </div>
       </nav>
