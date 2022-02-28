@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NivelRelacaoController;
 use App\Http\Controllers\PontosController;
 use App\Http\Controllers\RelacaoPontosController;
 use Illuminate\Support\Facades\Route;
@@ -16,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('pontos', PontosController::class);
-Route::post('pontos/editar', [PontosController::class, "alterar_todos"])->name("pontos.alterar");
+Route::post('pontos/editar', [PontosController::class, "editAll"])->name("pontos.alterar");
 Route::resource('relacoes_pontos', RelacaoPontosController::class);
+Route::post('relacoes_pontos/loadData', [RelacaoPontosController::class, 'loadData'])->name("relacoes_pontos.load");
+Route::resource('nivel', NivelRelacaoController::class);
