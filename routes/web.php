@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+})->name("inicio");
+
 Route::resource('pontos', PontosController::class);
 Route::post('pontos/editar', [PontosController::class, "editAll"])->name("pontos.alterar");
 Route::resource('relacoes_pontos', RelacaoPontosController::class);

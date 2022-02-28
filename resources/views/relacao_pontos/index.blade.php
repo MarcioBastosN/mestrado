@@ -23,7 +23,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="nivel_id">Nivel</label>
-                                <select name="nivel_id" id="nivel_id">
+                                <select name="nivel_id" id="nivel_id" class="form-control">
                                     @foreach ($niveis as $nivel)
                                         <option value="{{$nivel->id}}">{{$nivel->nivel}}</option>
                                     @endforeach

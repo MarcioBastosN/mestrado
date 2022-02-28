@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('body')
 
-    <form action="{{ route('nivel.store') }}" method="post">
+    <form action="{{ route('nivel.store') }}" method="post" class="form-inline">
         @csrf
         <div class="form-group">
             <label for="my-input">Nivel</label>
@@ -29,10 +29,12 @@
                     <td>{{$nivel->nivel}}</td>
                     <td>{{$nivel->score}}</td>
                     <td>
-                        <form action="{{ route("nivel.update", $nivel->id) }}" method="post">
+                        <form action="{{ route("nivel.update", $nivel->id) }}" method="post" class="form-inline">
                             @method("PATCH")
                             @csrf
-                            <input type="number" name="score" class="form-control">
+                            <div class="form-group">
+                                <input type="number" name="score" class="form-control">
+                            </div>
                             <button type="submit" class="btn btn-primary">atualizar</button>
                         </form>
                     </td>
