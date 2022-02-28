@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('relacao_pontos', function (Blueprint $table) {
             $table->id();
-            $table->string('ocorrencia')->fulltext();
-            $table->integer('score')->default(0);
+            $table->string('ocorrencia')->fulltext()->unique();
+            $table->Integer('nivel_id')->default(0);
             $table->timestamps();
         });
     }

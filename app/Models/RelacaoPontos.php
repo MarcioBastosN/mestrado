@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class RelacaoPontos extends Model
 {
@@ -12,6 +13,11 @@ class RelacaoPontos extends Model
     protected $fillable = [
         'id',
         'ocorrencia',
-        'score',
+        'nivel_id',
     ];
+
+    public function nivel() : HasOne
+    {
+        return $this->hasOne(NivelRelacao::class, 'id', 'nivel_id');
+    }
 }

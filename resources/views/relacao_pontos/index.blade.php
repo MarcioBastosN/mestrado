@@ -1,37 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layout.app')
+@section('body')
+<form action="{{ route('relacoes_pontos.load') }}" method="post">
+    @csrf
+    <button type="submit" class="btn btn-primary">Carregar Relações</button>
+</form>
     <table class="table">
         <thead>
             <tr>
                 <th>ocorrencia</th>
-                <th>score</th>
-                <th>atualizar</th>
+                <th>nivel</th>
+                <th>update</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($relacoes as $relacao)
                 <tr>
-                    <td>{{$relacao->ocorrencia}}</td>
-                    <td>{{$relacao->score}}</td>
+                    <td>{{ $relacao->ocorrencia }}</td>
+                    <td>{{ $relacao->nivel_id }}</td>
                     <td>
-                        <form action="{{route("relacoes_pontos.update", $relacao )}}" method="post">
+                        <form action="{{ route('relacoes_pontos.update', $relacao) }}" method="post" class="form-inline">
                             @method('PUT')
                             @csrf
-                            <input type="number" name="score">
-                            <input type="submit" value="Salvar">
+                            <div class="form-group">
+                                <label for="nivel_id">Nivel</label>
+                                <select name="nivel_id" id="nivel_id">
+                                    @foreach ($niveis as $nivel)
+                                        <option value="{{$nivel->id}}">{{$nivel->nivel}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-primary">Submit</button>
                         </form>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
-
-</body>
-</html>
+@endsection

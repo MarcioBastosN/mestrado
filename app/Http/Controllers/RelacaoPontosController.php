@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\RelacaoPontos;
 use App\Http\Requests\StoreRelacaoPontosRequest;
 use App\Http\Requests\UpdateRelacaoPontosRequest;
+use App\Models\NivelRelacao;
+use App\Models\Pontos;
 
 class RelacaoPontosController extends Controller
 {
@@ -16,7 +18,8 @@ class RelacaoPontosController extends Controller
     public function index()
     {
         $relacoes = RelacaoPontos::all();
-        return view("relacao_pontos.index")->with(compact('relacoes'));
+        $niveis = NivelRelacao::all();
+        return view("relacao_pontos.index")->with(compact('relacoes', 'niveis'));
     }
 
     /**
@@ -71,7 +74,11 @@ class RelacaoPontosController extends Controller
      */
     public function update(UpdateRelacaoPontosRequest $request, RelacaoPontos $relacoes_ponto)
     {
-        $relacoes_ponto->update($request->all());
+        try {
+            $relacoes_ponto->update($request->all());
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
         return redirect()->route("relacoes_pontos.index");
     }
 
@@ -84,5 +91,18 @@ class RelacaoPontosController extends Controller
     public function destroy(RelacaoPontos $relacaoPontos)
     {
         //
+    }
+
+    public function loadData()
+    {
+        $pontos = Pontos::distinct()->get('ocorrencia');
+        foreach($pontos as $ponto){
+            try {
+                RelacaoPontos::create(['ocorrencia' => $ponto->ocorrencia]);
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+        }
+        return redirect()->route('relacoes_pontos.index');
     }
 }
