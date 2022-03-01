@@ -19,8 +19,8 @@
             <tr>
                 <th>Nivel</th>
                 <th>Score</th>
-                <th>update</th>
-                {{-- <th>delet</th> --}}
+                <th>update Score</th>
+                <th>Remover</th>
             </tr>
         </thead>
         <tbody>
@@ -38,7 +38,13 @@
                             <button type="submit" class="btn btn-primary">atualizar</button>
                         </form>
                     </td>
-                    {{-- <td></td> --}}
+                    <td>
+                        <form action="{{ route('nivel.destroy', $nivel->id) }}" method="post">
+                            @method("DELETE")
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Apagar</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

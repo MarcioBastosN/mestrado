@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call(PontosSeeder::class);
-        // $this->call(RelacaoPontosSeeder::class);
+        $this->call(NivelRelacaoSeeder::class);
 
     }
 }

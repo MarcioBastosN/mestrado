@@ -17,7 +17,7 @@ class RelacaoPontosController extends Controller
      */
     public function index()
     {
-        $relacoes = RelacaoPontos::all();
+        $relacoes = RelacaoPontos::orderBy('nivel_id')->get();
         $niveis = NivelRelacao::all();
         return view("relacao_pontos.index")->with(compact('relacoes', 'niveis'));
     }

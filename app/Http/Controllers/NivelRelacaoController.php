@@ -96,8 +96,9 @@ class NivelRelacaoController extends Controller
      * @param  \App\Models\NivelRelacao  $nivelRelacao
      * @return \Illuminate\Http\Response
      */
-    public function destroy(NivelRelacao $nivelRelacao)
+    public function destroy($nivelRelacao)
     {
-
+        NivelRelacao::find($nivelRelacao)->delete();
+        return redirect()->route('nivel.index');
     }
 }
