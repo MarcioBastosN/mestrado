@@ -88,9 +88,12 @@ class RelacaoPontosController extends Controller
      * @param  \App\Models\RelacaoPontos  $relacaoPontos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RelacaoPontos $relacaoPontos)
+    public function destroy($relacaoPontos)
     {
-        //
+        $relacao = RelacaoPontos::find($relacaoPontos);
+        Pontos::where('ocorrencia', $relacao->ocorrencia)->delete();
+        $relacao->delete();
+        return redirect()->route("relacoes_pontos.index");
     }
 
     public function loadData()
