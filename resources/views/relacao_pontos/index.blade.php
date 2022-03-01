@@ -2,7 +2,7 @@
 @section('body')
 <form action="{{ route('relacoes_pontos.load') }}" method="post">
     @csrf
-    <button type="submit" class="btn btn-primary">Carregar Relações</button>
+    <button type="submit" class="btn btn-block btn-primary">Carregar Relações</button>
 </form>
     <table class="table">
         <thead>

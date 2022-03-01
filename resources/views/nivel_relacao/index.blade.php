@@ -8,7 +8,7 @@
             <input type="number" class="form-control" name="nivel">
         </div>
         <div class="form-group">
-            <label for="my-input">Score</label>
+            <label for="my-input">Pontos</label>
             <input type="number" class="form-control" name="score" >
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -19,7 +19,7 @@
             <tr>
                 <th>Nivel</th>
                 <th>Score</th>
-                <th>update Score</th>
+                <th>update Pontos</th>
                 <th>Remover</th>
             </tr>
         </thead>

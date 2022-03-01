@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorepontosRequest;
 use App\Http\Requests\UpdatepontosRequest;
 use App\Models\Pontos;
+use App\Models\RelacaoPontos;
 
 class PontosController extends Controller
 {
@@ -16,7 +17,8 @@ class PontosController extends Controller
     public function index()
     {
         $pontos = Pontos::all();
-        return view("pontos.index")->with(compact("pontos"));
+        $relacoes = (RelacaoPontos::where('nivel_id', 0)->count() > 0) ? true : false;
+        return view("pontos.index")->with(compact("pontos", 'relacoes'));
     }
 
     /**
