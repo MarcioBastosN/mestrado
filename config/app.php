@@ -191,7 +191,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // ...
+        'FastExcel' => Rap2hpoutre\FastExcel\Facades\FastExcel::class,
     ])->toArray(),
 
 ];
