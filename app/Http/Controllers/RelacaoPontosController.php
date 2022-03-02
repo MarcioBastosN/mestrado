@@ -101,7 +101,7 @@ class RelacaoPontosController extends Controller
         $pontos = Pontos::distinct()->get('ocorrencia');
         foreach($pontos as $ponto){
             try {
-                RelacaoPontos::create(['ocorrencia' => $ponto->ocorrencia]);
+                RelacaoPontos::create(['ocorrencia' => $ponto->ocorrencia, 'nivel_id' => 1]);
             } catch (\Throwable $th) {
                 //throw $th;
             }

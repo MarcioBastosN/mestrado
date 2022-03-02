@@ -19,5 +19,16 @@ class TabelaController extends Controller
 
     }
 
+    public function exportTable()
+    {
+        $list = collect([
+            [ 'id' => 1, 'name' => 'Jane' ],
+            [ 'id' => 2, 'name' => 'John' ],
+        ]);
+
+        // return (new FastExcel($list))->export('file.xlsx');
+        return (new FastExcel($list))->download('tabela.xlsx');
+    }
+
 
 }
