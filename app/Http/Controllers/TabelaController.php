@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\NivelRelacao;
 use App\Models\Pontos;
-use Rap2hpoutre\FastExcel\FastExcel;
+// use Rap2hpoutre\FastExcel\FastExcel;
 use Illuminate\Http\Request;
 
 class TabelaController extends Controller
