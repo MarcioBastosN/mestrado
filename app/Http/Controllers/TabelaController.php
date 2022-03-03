@@ -31,23 +31,21 @@ class TabelaController extends Controller
             $linha = array('setor' => $setor->setor,
                     "X" => $pontos->where('setor', $setor->setor)->first()->X,
                     "Y" => $pontos->where('setor', $setor->setor)->first()->Y);
-            // array_push($linhas, $linha);
             $soma = 0;
-            $percorreNivel = array();
             foreach ($niveis as $nivel) {
                 $temp = 0;
                 $temp = $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score');
-                array_push($percorreNivel, ['nivel' => $temp]);
+                $linha["nivel $nivel->nivel"] = $temp;
                 $soma += $temp;
             }
-            array_push($linha, $percorreNivel);
-            $soma / $nivel->count();
+            // $soma / $nivel->count();
             // array_merge($linhas, ["total" => ($soma / $nivel->count())]);
             array_push($linhas, $linha);
+            // $linhas['total'] = $soma / $nivel->count();
         }
 
 
-        $list = collect($linha);
+        $list = collect($linhas);
         // dd($list);
         // return (new FastExcel($list))->export('file.xlsx');
         return (new FastExcel($list))->download('tabela.xlsx');
