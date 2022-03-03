@@ -15,8 +15,8 @@ class NivelRelacao extends Model
         'score',
     ];
 
-    public function existeRelecao()
+    public function existeRelacao()
     {
-        return $this->hasMany(RelacaoPontos::class, 'id', 'nivel');
+        return $this->hasMany(RelacaoPontos::class, 'nivel_id', 'id');
     }
 }

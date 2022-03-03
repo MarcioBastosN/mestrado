@@ -26,15 +26,19 @@
                         $soma = 0;
                     @endphp
                     @foreach ($niveis as $nivel)
-                        @php
-                            $temp = 0;
-                        @endphp
-                        <td>{{ $temp =
-                            $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score') }}
-                        </td>
-                        @php
-                            $soma += $temp;
-                        @endphp
+                        @if ($nivel->existeRelacao->count() > 0)
+                            @php
+                                $temp = 0;
+                            @endphp
+                            <td>{{ $temp =
+                                $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score') }}
+                            </td>
+                            @php
+                                $soma += $temp;
+                            @endphp
+                        @else
+                        <td>0</td>
+                        @endif
                     @endforeach
                     <td>{{ $soma / $nivel->count() }}</td>
                 </tr>
