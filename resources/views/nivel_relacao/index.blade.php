@@ -37,6 +37,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">atualizar</button>
                         </form>
+                        <p>{{$nivel->existeRelacao->count() <= 0 ? "Não esta em uso" : ""}}</p>
                     </td>
                     <td>
                         <form action="{{ route('nivel.destroy', $nivel->id) }}" method="post">
