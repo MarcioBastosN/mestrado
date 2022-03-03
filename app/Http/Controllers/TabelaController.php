@@ -34,7 +34,10 @@ class TabelaController extends Controller
             $soma = 0;
             foreach ($niveis as $nivel) {
                 $temp = 0;
-                $temp = $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score');
+                if ($pontos->where('score', $nivel->score)->sum('score') > 0) {
+                    $temp = $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score');
+                }
+
                 $linha["nivel $nivel->nivel"] = $temp;
                 $soma += $temp;
             }

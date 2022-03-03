@@ -4,6 +4,9 @@
         <h3>Necessario relacionar os pontos aos niveis <a href="{{ route('pontos.index') }}">Ir a pagina</a></h3>
     </div>
 @else
+    <form action="{{ route('exportTable')}}" method="get">
+        <button type="submit">Download Tabela</button>
+    </form>
     <table class="table">
         <thead>
             <tr>
@@ -30,14 +33,18 @@
                             @php
                                 $temp = 0;
                             @endphp
-                            <td>{{ $temp =
-                                $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score') }}
+                            <td>
+                                @if ($pontos->where('score', $nivel->score)->sum('score') > 0)
+                                    {{ $temp = $pontos->where('setor', $setor->setor)->where('score', $nivel->score)->sum('score') / $pontos->where('score', $nivel->score)->sum('score') }}
+                                @else
+                                    0
+                                @endif
                             </td>
                             @php
                                 $soma += $temp;
                             @endphp
                         @else
-                        <td>0</td>
+                            <td>0</td>
                         @endif
                     @endforeach
                     <td>{{ $soma / $nivel->count() }}</td>
