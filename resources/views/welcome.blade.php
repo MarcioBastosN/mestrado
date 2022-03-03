@@ -34,4 +34,18 @@
           </div>
     </div>
 </div>
+<div class="row">
+    <div class="col">
+        <form action="{{ route('pontos.erase')}}" method="post">
+            @csrf
+            <button type="submit">Zerar Tabelas</button>
+        </form>
+    </div>
+    <div class="col">
+        <form action="{{ route('pontos.seedLoading')}}" method="post">
+            @csrf
+            <button type="submit">Carregar dados do seed</button>
+        </form>
+    </div>
+</div>
 

@@ -6,6 +6,10 @@ use App\Http\Requests\StorepontosRequest;
 use App\Http\Requests\UpdatepontosRequest;
 use App\Models\Pontos;
 use App\Models\RelacaoPontos;
+use Database\Seeders\DatabaseSeeder;
+use Database\Seeders\PontosSeeder;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PontosController extends Controller
 {
@@ -96,4 +100,18 @@ class PontosController extends Controller
 
         return redirect()->route("pontos.index");
     }
+
+    public function zerarTabelas()
+    {
+        Pontos::truncate();
+        RelacaoPontos::truncate();
+        return redirect()->route("pontos.index");
+    }
+
+    public function seedLoading()
+    {
+        //
+        return redirect()->route("pontos.index");
+    }
+
 }
