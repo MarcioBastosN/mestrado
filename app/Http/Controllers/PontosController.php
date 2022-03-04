@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorepontosRequest;
 use App\Http\Requests\UpdatepontosRequest;
+use App\Models\NivelRelacao;
 use App\Models\Pontos;
 use App\Models\RelacaoPontos;
 use Database\Seeders\DatabaseSeeder;
 use Database\Seeders\PontosSeeder;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 
 class PontosController extends Controller
@@ -105,13 +107,26 @@ class PontosController extends Controller
     {
         Pontos::truncate();
         RelacaoPontos::truncate();
+        NivelRelacao::truncate();
         return redirect()->route("pontos.index");
     }
 
-    public function seedLoading()
+    public function seedLoadingPontos()
     {
-        //
+        if (Pontos::count() <= 0) {
+            Artisan::call('db:seed --class=PontosSeeder');
+        }
+
         return redirect()->route("pontos.index");
+    }
+
+    public function seedLoadingNivel()
+    {
+        if (NivelRelacao::count() <= 0) {
+            Artisan::call('db:seed --class=NivelRelacaoSeeder');
+        }
+
+        return redirect()->route("nivel.index");
     }
 
 }

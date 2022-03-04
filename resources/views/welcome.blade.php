@@ -42,9 +42,15 @@
         </form>
     </div>
     <div class="col">
-        <form action="{{ route('pontos.seedLoading')}}" method="post">
+        <form action="{{ route('pontos.seedLoadingPontos')}}" method="post">
             @csrf
-            <button type="submit">Carregar dados do seed</button>
+            <button type="submit">Carregar dados Pontos seed</button>
+        </form>
+    </div>
+    <div class="col">
+        <form action="{{ route('pontos.seedLoadingNivel')}}" method="post">
+            @csrf
+            <button type="submit">Carregar dados Nivel seed</button>
         </form>
     </div>
 </div>

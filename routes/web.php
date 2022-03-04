@@ -24,7 +24,8 @@ Route::get('/', function () {
 Route::resource('pontos', PontosController::class);
 Route::post('pontos/editar', [PontosController::class, "editAll"])->name("pontos.alterar");
 Route::post('pontos/erase', [PontosController::class, "zerarTabelas"])->name("pontos.erase");
-Route::post('pontos/seedLoading', [PontosController::class, "seedLoading"])->name("pontos.seedLoading");
+Route::post('pontos/seedLoadingPontos', [PontosController::class, "seedLoadingPontos"])->name("pontos.seedLoadingPontos");
+Route::post('pontos/seedLoadingNivel', [PontosController::class, "seedLoadingNivel"])->name("pontos.seedLoadingNivel");
 Route::resource('relacoes_pontos', RelacaoPontosController::class);
 Route::post('relacoes_pontos/loadData', [RelacaoPontosController::class, 'loadData'])->name("relacoes_pontos.load");
 Route::resource('nivel', NivelRelacaoController::class);
