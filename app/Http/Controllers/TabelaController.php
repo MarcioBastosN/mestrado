@@ -41,8 +41,8 @@ class TabelaController extends Controller
                 $linha["nivel $nivel->nivel"] = $temp;
                 $soma += $temp;
             }
+            $linha['total'] = ($soma / $nivel->count());
             array_push($linhas, $linha);
-            // $linhas['total'] = $soma / $nivel->count();
         }
 
 
