@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\NivelRelacao;
 use App\Models\Pontos;
+use App\Models\RelacaoPontos;
 use Rap2hpoutre\FastExcel\FastExcel;
 use Illuminate\Http\Request;
 
@@ -62,6 +63,7 @@ class TabelaController extends Controller
         }
 
         Pontos::truncate();
+        RelacaoPontos::truncate();
 
         $ponto = (new FastExcel)->import($request->file('tabela'), function ($line) {
             Pontos::create([

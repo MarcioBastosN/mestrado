@@ -67,7 +67,7 @@
                 - setor
             </p>
             <div class="alert alert-warning" role="alert">
-                <p>A tabela de pontos e zerada antes de incluir novos dados.</p>
+                <p>As tabelas (Pontos e Classificação) são zeradas antes de incluir novos dados.</p>
             </div>
             <form action="{{ route('importData') }}" method="post" enctype="multipart/form-data">
                 @csrf
