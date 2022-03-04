@@ -54,4 +54,28 @@
         </form>
     </div>
 </div>
+<div class="row">
+    <div class="col">
+        <p>
+            * O arquivo deve estar no formato (.xlsx)
+            * Deve conter a seguinte estrutura de colunas:
+                - x
+                - y
+                - ocorrencia
+                - bairro
+                - setor
+        </p>
+        <div class="alert alert-warning" role="alert">
+            <p>A tabela de pontos e zerada antes de incluir novos dados.</p>
+        </div>
+        <form action="{{ route('importData') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Carrega Dados pontos</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" name="tabela">
+            </div>
+            <button type="submit" class="btn btn-primary">carregar</button>
+          </form>
+    </div>
+</div>
 

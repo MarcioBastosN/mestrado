@@ -47,8 +47,29 @@ class TabelaController extends Controller
 
 
         $list = collect($linhas);
-        // dd($list);
         // return (new FastExcel($list))->export('file.xlsx');
         return (new FastExcel($list))->download('tabela.xlsx');
+    }
+
+    public function importData(Request $request)
+    {
+
+        if ($request->file('tabela') == null) {
+            return redirect()->route('pontos.index');
+        }
+
+        Pontos::truncate();
+
+        $ponto = (new FastExcel)->import($request->file('tabela'), function ($line) {
+            Pontos::create([
+                'x' => $line['x'],
+                'y' => $line['y'],
+                'ocorrencia' => $line['ocorrencia'],
+                'bairro' => $line['bairro'],
+                'setor' => $line['setor']
+            ]);
+        });
+
+        return redirect()->route('pontos.index');
     }
 }

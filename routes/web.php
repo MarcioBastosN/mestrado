@@ -31,5 +31,6 @@ Route::post('relacoes_pontos/loadData', [RelacaoPontosController::class, 'loadDa
 Route::resource('nivel', NivelRelacaoController::class);
 Route::get('tabela', [TabelaController::class, 'index'])->name('tabela');
 Route::get('tabela/download', [TabelaController::class, 'exportTable'])->name('exportTable');
+Route::post('tabela/importData', [TabelaController::class, 'importData'])->name('importData');
 
 
