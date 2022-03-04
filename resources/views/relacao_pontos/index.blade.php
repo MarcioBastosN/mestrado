@@ -1,9 +1,17 @@
 @extends('layout.app')
 @section('body')
+@if ($niveis->count() <= 0)
+<div class="alert alert-warning" role="alert">
+    <p>A tabela estara disponivel para carregar assim que:</p>
+    <p>Os niveis forem gerados <a href="{{ route('nivel.index')}}">Ir para niveis</a></p>
+</div>
+@else
 <form action="{{ route('relacoes_pontos.load') }}" method="post">
     @csrf
     <button type="submit" class="btn btn-block btn-primary">Carregar Relações</button>
 </form>
+@endif
+
     <table class="table">
         <thead>
             <tr>

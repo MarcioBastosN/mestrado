@@ -21,6 +21,7 @@ class TabelaController extends Controller
 
     public function exportTable()
     {
+        ini_set("max_execution_time", 600);
 
         $setores = Pontos::distinct()->get('setor');
         $niveis = NivelRelacao::all();
@@ -53,6 +54,8 @@ class TabelaController extends Controller
 
     public function importData(Request $request)
     {
+
+        ini_set("max_execution_time", 600);
 
         if ($request->file('tabela') == null) {
             return redirect()->route('pontos.index');
