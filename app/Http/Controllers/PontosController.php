@@ -24,7 +24,8 @@ class PontosController extends Controller
     {
         $pontos = Pontos::all();
         $relacoes = (RelacaoPontos::where('nivel_id', 0)->count() > 0) ? true : false;
-        return view("pontos.index")->with(compact("pontos", 'relacoes'));
+        $ocorrencias = Pontos::distinct()->get('ocorrencia')->count();
+        return view("pontos.index")->with(compact("pontos", 'relacoes', 'ocorrencias'));
     }
 
     /**

@@ -65,7 +65,7 @@ class TabelaController extends Controller
         Pontos::truncate();
         RelacaoPontos::truncate();
 
-        $ponto = (new FastExcel)->import($request->file('tabela'), function ($line) {
+        (new FastExcel)->import($request->file('tabela'), function ($line) {
             Pontos::create([
                 'x' => $line['x'],
                 'y' => $line['y'],

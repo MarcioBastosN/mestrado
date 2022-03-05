@@ -1,18 +1,30 @@
 @extends('layout.app')
 @section('body')
-
-    <form action="{{ route('nivel.store') }}" method="post" class="form-inline">
-        @csrf
-        <div class="form-group">
-            <label for="my-input">Nivel</label>
-            <input type="number" class="form-control" name="nivel">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Inserir Nivel</h5>
+            <form action="{{ route('nivel.store') }}" method="post" class="form-inline">
+                @csrf
+                <div class="form-group">
+                    <label for="my-input">Nivel</label>
+                    <input type="number" class="form-control" name="nivel">
+                </div>
+                <div class="form-group">
+                    <label for="my-input">Pontos</label>
+                    <input type="number" class="form-control" name="score">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="my-input">Pontos</label>
-            <input type="number" class="form-control" name="score" >
+    </div>
+    @if ($niveis->count() <= 0)
+        <div class="col mt-3">
+            <form action="{{ route('pontos.seedLoadingNivel') }}" method="post">
+                @csrf
+                <button type="submit" class="btn btn-block btn-info">Carregar dados Nivel via seed</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    @endif
 
     <table class="table">
         <thead>
@@ -26,10 +38,10 @@
         <tbody>
             @foreach ($niveis as $nivel)
                 <tr>
-                    <td>{{$nivel->nivel}}</td>
-                    <td>{{$nivel->score}}</td>
+                    <td>{{ $nivel->nivel }}</td>
+                    <td>{{ $nivel->score }}</td>
                     <td>
-                        <form action="{{ route("nivel.update", $nivel->id) }}" method="post" class="form-inline">
+                        <form action="{{ route('nivel.update', $nivel->id) }}" method="post" class="form-inline">
                             @method("PATCH")
                             @csrf
                             <div class="form-group">
@@ -37,7 +49,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">atualizar</button>
                         </form>
-                        <p>{{$nivel->existeRelacao->count() <= 0 ? "Não esta em uso" : ""}}</p>
+                        <p>{{ $nivel->existeRelacao->count() <= 0 ? 'Não esta em uso' : '' }}</p>
                     </td>
                     <td>
                         <form action="{{ route('nivel.destroy', $nivel->id) }}" method="post">
