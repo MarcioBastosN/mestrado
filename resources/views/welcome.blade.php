@@ -1,5 +1,5 @@
 @include('layout.app')
-
+@include('component._alert')
 <div class="row">
     <div class="col">
         <div class="card">
@@ -79,7 +79,7 @@
                 <form action="{{ route('importData') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Carrega Dados pontos</label>
+                        <label for="exampleFormControlFile1">Carregar dados pontos</label>
                         <input type="file" class="form-control-file" id="exampleFormControlFile1" name="tabela">
                     </div>
                     <button type="submit" class="btn btn-block btn-primary">carregar</button>

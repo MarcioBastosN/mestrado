@@ -23,7 +23,8 @@ class PontosController extends Controller
     public function index()
     {
         $pontos = Pontos::all();
-        $relacoes = (RelacaoPontos::where('nivel_id', 0)->count() > 0) ? true : false;
+        $relacoes = (RelacaoPontos::count() <= 0) ? 1 : 0;
+        // $relacoes = (RelacaoPontos::where('nivel_id', 0)->count() >= 0) ? 1 : 0;
         $ocorrencias = Pontos::distinct()->get('ocorrencia')->count();
         return view("pontos.index")->with(compact("pontos", 'relacoes', 'ocorrencias'));
     }
@@ -109,7 +110,7 @@ class PontosController extends Controller
         Pontos::truncate();
         RelacaoPontos::truncate();
         NivelRelacao::truncate();
-        return redirect()->route("pontos.index");
+        return redirect()->route("inicio")->with('success', "Tabelas apagadas com sucesso!");
     }
 
     public function seedLoadingPontos()

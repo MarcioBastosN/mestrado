@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\NivelRelacao;
 use App\Models\Pontos;
 use App\Models\RelacaoPontos;
+use Exception;
 use Rap2hpoutre\FastExcel\FastExcel;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\TryCatch;
 
 class TabelaController extends Controller
 {
@@ -16,7 +18,7 @@ class TabelaController extends Controller
         $setores = Pontos::distinct()->get('setor');
         $niveis = NivelRelacao::all();
         $pontos = Pontos::all();
-
+        // $relacoes = RelacaoPontos::distinct()->get('nivel_id')->count();
         return view('tabela.index')->with(compact('setores', "niveis", 'pontos'));
     }
 
@@ -30,9 +32,11 @@ class TabelaController extends Controller
 
         $linhas = array();
         foreach ($setores as $setor) {
-            $linha = array('setor' => $setor->setor,
-                    "X" => $pontos->where('setor', $setor->setor)->first()->X,
-                    "Y" => $pontos->where('setor', $setor->setor)->first()->Y);
+            $linha = array(
+                'setor' => $setor->setor,
+                "X" => $pontos->where('setor', $setor->setor)->first()->X,
+                "Y" => $pontos->where('setor', $setor->setor)->first()->Y
+            );
             $soma = 0;
             foreach ($niveis as $nivel) {
                 $temp = 0;
@@ -58,8 +62,12 @@ class TabelaController extends Controller
 
         ini_set("max_execution_time", 600);
 
-        if ($request->file('tabela') == null) {
-            return redirect()->route('pontos.index');
+        if($request->file('tabela') == null){
+            return redirect()->route('inicio')->with("error", "Arquivo não pode ser vazio!");
+        }
+
+        if ($request->file('tabela')->extension() != "xlsx") {
+            return redirect()->route('inicio')->with("error", "Arquivo invalido!");
         }
 
         Pontos::truncate();

@@ -9,20 +9,27 @@
                 <p>A classificação não pode conter um ou mais niveis = '0'. Editar <a
                         href="{{ route('relacoes_pontos.index') }}">classificação</a></p>
             @else
-                <form action="{{ route('pontos.alterar') }}" method="post">
-                    @csrf
-                    <button type="submit" class="btn btn-block btn-primary">Atualizar Pontos</button>
-                </form>
+                @if ($pontos->count() > 0)
+                    <form action="{{ route('pontos.alterar') }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-block btn-primary">Atualizar Pontos</button>
+                    </form>
+                @else
+                <div class="alert alert-warning" role="alert">
+                    <p>Necessario carregar a Tabela de pontos.<br/> Execute o seed ou carregue uma tabela</p>
+                    <p><a href="{{ route('inicio') }}">Home</a></p>
+                </div>
+                @endif
             @endif
         </div>
         <div class="col">
             <div class="card border-info">
                 <div class="card-body">
                     <h5 class="card-title">Info:</h5>
-                    <p>Total de pontos: {{$pontos->count()}}
-                    <br/>
-                    Ocorrências distintas: {{$ocorrencias}}
-                </p>
+                    <p>Total de pontos: {{ $pontos->count() }}
+                        <br />
+                        Ocorrências distintas: {{ $ocorrencias }}
+                    </p>
                 </div>
             </div>
         </div>
