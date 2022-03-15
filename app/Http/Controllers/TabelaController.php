@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\NivelRelacao;
 use App\Models\Pontos;
 use App\Models\RelacaoPontos;
-use Exception;
 use Rap2hpoutre\FastExcel\FastExcel;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\TryCatch;
 
 class TabelaController extends Controller
 {
@@ -18,8 +16,16 @@ class TabelaController extends Controller
         $setores = Pontos::distinct()->get('setor');
         $niveis = NivelRelacao::all();
         $pontos = Pontos::all();
-        // $relacoes = RelacaoPontos::distinct()->get('nivel_id')->count();
-        return view('tabela.index')->with(compact('setores', "niveis", 'pontos'));
+
+        $niveisValidos = 0;
+        foreach($niveis as $nivel)
+        {
+            if(!is_null($nivel->existeRelacao())){
+                $niveisValidos += 1;
+            }
+        }
+
+        return view('tabela.index')->with(compact('setores', "niveis", 'pontos', 'niveisValidos'));
     }
 
     public function exportTable()
@@ -29,6 +35,14 @@ class TabelaController extends Controller
         $setores = Pontos::distinct()->get('setor');
         $niveis = NivelRelacao::all();
         $pontos = Pontos::all();
+
+        $niveisValidos = 0;
+        foreach($niveis as $nivel)
+        {
+            if(!is_null($nivel->existeRelacao())){
+                $niveisValidos += 1;
+            }
+        }
 
         $linhas = array();
         foreach ($setores as $setor) {
@@ -47,7 +61,8 @@ class TabelaController extends Controller
                 $linha["nivel $nivel->nivel"] = $temp;
                 $soma += $temp;
             }
-            $linha['total'] = ($soma / $nivel->count());
+            // $linha['total'] = ($soma / $nivel->count());
+            $linha['total'] = ($soma / $niveisValidos);
             array_push($linhas, $linha);
         }
 

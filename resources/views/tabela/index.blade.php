@@ -47,7 +47,7 @@
                             <td>0</td>
                         @endif
                     @endforeach
-                    <td>{{ $soma / $nivel->count() }}</td>
+                    <td>{{ $soma / $niveisValidos }}</td>
                 </tr>
             @endforeach
         </tbody>

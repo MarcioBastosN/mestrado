@@ -9,6 +9,7 @@
         <tr>
             <th>bairro</th>
             <th>IV - bairro</th>
+            <th>setores</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
             <tr>
                 <td>{{$registro->bairro}}</td>
                 <td>{{$registros->where('bairro', $registro->bairro)->sum('iv')}}</td>
+                <td>{{$registros->where('bairro', $registro->bairro)->count()}}</td>
             </tr>
         @endforeach
     </tbody>
