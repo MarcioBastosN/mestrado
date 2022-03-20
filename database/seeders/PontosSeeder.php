@@ -36,7 +36,6 @@ Pontos::create(["X" => "-54.68473", "Y" => "-2.47653", "ocorrencia" => " H12.VIO
 Pontos::create(["X" => "-54.68521", "Y" => "-2.47614", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Jaderlandia", "setor" =>5]);
 Pontos::create(["X" => "-54.68473", "Y" => "-2.47653", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Jaderlandia", "setor" =>5]);
 Pontos::create(["X" => "-54.6749", "Y" => "-2.4917", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Mararu", "setor" =>6]);
-Pontos::create(["X" => "-54.67778", "Y" => "-2.48655", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Mararu", "setor" =>6]);
 Pontos::create(["X" => "-54.6596", "Y" => "-2.4824", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Urumanduba", "setor" =>7]);
 Pontos::create(["X" => "-54.67054", "Y" => "-2.49078", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Urumanduba", "setor" =>7]);
 Pontos::create(["X" => "-54.6656", "Y" => "-2.4845", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Urumanduba", "setor" =>7]);
@@ -48,8 +47,6 @@ Pontos::create(["X" => "-54.7108", "Y" => "-2.4408", "ocorrencia" => " A05.VIAS 
 Pontos::create(["X" => "-54.71", "Y" => "-2.4399", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Interventoria", "setor" =>36]);
 Pontos::create(["X" => "-54.71024", "Y" => "-2.44078", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Interventoria", "setor" =>36]);
 Pontos::create(["X" => "-54.7324", "Y" => "-2.43456", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Caranazal", "setor" =>45]);
-Pontos::create(["X" => "-54.6943", "Y" => "-2.4309", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santana", "setor" =>74]);
-Pontos::create(["X" => "-54.6946", "Y" => "-2.4333", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santana", "setor" =>74]);
 Pontos::create(["X" => "-54.69537", "Y" => "-2.43154", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Santana", "setor" =>74]);
 Pontos::create(["X" => "-54.69622", "Y" => "-2.43422", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Santana", "setor" =>74]);
 Pontos::create(["X" => "-54.7058", "Y" => "-2.42902", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Santissimo", "setor" =>75]);
@@ -61,10 +58,8 @@ Pontos::create(["X" => "-54.6995", "Y" => "-2.4392", "ocorrencia" => " D01.HOMIC
 Pontos::create(["X" => "-54.70225", "Y" => "-2.43664", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Santana", "setor" =>79]);
 Pontos::create(["X" => "-54.6971", "Y" => "-2.4358", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Santana", "setor" =>81]);
 Pontos::create(["X" => "-54.6954", "Y" => "-2.435", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Santana", "setor" =>81]);
-Pontos::create(["X" => "-54.6987", "Y" => "-2.43865", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santana", "setor" =>81]);
 Pontos::create(["X" => "-54.69573", "Y" => "-2.43542", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Santana", "setor" =>81]);
 Pontos::create(["X" => "-54.69693", "Y" => "-2.4365", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Santana", "setor" =>81]);
-Pontos::create(["X" => "-54.69884", "Y" => "-2.43853", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santana", "setor" =>81]);
 Pontos::create(["X" => "-54.702", "Y" => "-2.4409", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Livramento", "setor" =>82]);
 Pontos::create(["X" => "-54.702", "Y" => "-2.4409", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Livramento", "setor" =>82]);
 Pontos::create(["X" => "-54.7018", "Y" => "-2.44098", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Livramento", "setor" =>82]);
@@ -96,7 +91,6 @@ Pontos::create(["X" => "-54.69173", "Y" => "-2.43471", "ocorrencia" => " E03.LES
 Pontos::create(["X" => "-54.6903", "Y" => "-2.434", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Uruara", "setor" =>87]);
 Pontos::create(["X" => "-54.68908", "Y" => "-2.4387", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Uruara", "setor" =>87]);
 Pontos::create(["X" => "-54.6937", "Y" => "-2.4415", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Uruara", "setor" =>88]);
-Pontos::create(["X" => "-54.6921", "Y" => "-2.4408", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Uruara", "setor" =>88]);
 Pontos::create(["X" => "-54.6938", "Y" => "-2.4417", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Uruara", "setor" =>88]);
 Pontos::create(["X" => "-54.6938", "Y" => "-2.4417", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Uruara", "setor" =>88]);
 Pontos::create(["X" => "-54.6993", "Y" => "-2.442", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Livramento", "setor" =>90]);
@@ -115,8 +109,6 @@ Pontos::create(["X" => "-54.7102", "Y" => "-2.4454", "ocorrencia" => " H12.VIOLE
 Pontos::create(["X" => "-54.70434", "Y" => "-2.44172", "ocorrencia" => " C04.ESTUPRO DE VULNERAVEL", "bairro" => "Interventoria", "setor" =>95]);
 Pontos::create(["X" => "-54.70472", "Y" => "-2.44047", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Interventoria", "setor" =>95]);
 Pontos::create(["X" => "-54.70398", "Y" => "-2.44212", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Interventoria", "setor" =>95]);
-Pontos::create(["X" => "-54.70491", "Y" => "-2.44169", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Interventoria", "setor" =>95]);
-Pontos::create(["X" => "-54.70479", "Y" => "-2.44178", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Interventoria", "setor" =>95]);
 Pontos::create(["X" => "-54.7159", "Y" => "-2.4472", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Aeroporto Velho", "setor" =>99]);
 Pontos::create(["X" => "-54.69294", "Y" => "-2.44396", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Uruara", "setor" =>112]);
 Pontos::create(["X" => "-54.6931", "Y" => "-2.445", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Uruara", "setor" =>112]);
@@ -141,7 +133,6 @@ Pontos::create(["X" => "-54.7188", "Y" => "-2.4591", "ocorrencia" => " E03.LESÕ
 Pontos::create(["X" => "-54.7198", "Y" => "-2.4589", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Floresta", "setor" =>119]);
 Pontos::create(["X" => "-54.7179", "Y" => "-2.4566", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Floresta", "setor" =>119]);
 Pontos::create(["X" => "-54.71947", "Y" => "-2.45978", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Floresta", "setor" =>119]);
-Pontos::create(["X" => "-54.71975", "Y" => "-2.46092", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Floresta", "setor" =>119]);
 Pontos::create(["X" => "-54.71769", "Y" => "-2.4546", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Floresta", "setor" =>119]);
 Pontos::create(["X" => "-54.7257", "Y" => "-2.4554", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Floresta", "setor" =>120]);
 Pontos::create(["X" => "-54.72381", "Y" => "-2.4584", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Floresta", "setor" =>120]);
@@ -178,7 +169,6 @@ Pontos::create(["X" => "-54.7157", "Y" => "-2.4683", "ocorrencia" => " A05.VIAS 
 Pontos::create(["X" => "-54.714", "Y" => "-2.4661", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Nova Republica", "setor" =>136]);
 Pontos::create(["X" => "-54.71409", "Y" => "-2.46757", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Nova Republica", "setor" =>136]);
 Pontos::create(["X" => "-54.71409", "Y" => "-2.46757", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Nova Republica", "setor" =>136]);
-Pontos::create(["X" => "-54.7149", "Y" => "-2.4634", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Sao Francisco", "setor" =>137]);
 Pontos::create(["X" => "-54.71539", "Y" => "-2.46335", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Sao Francisco", "setor" =>137]);
 Pontos::create(["X" => "-54.7196", "Y" => "-2.46446", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Sao Francisco", "setor" =>137]);
 Pontos::create(["X" => "-54.7161", "Y" => "-2.4623", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Sao Francisco", "setor" =>138]);
@@ -208,7 +198,6 @@ Pontos::create(["X" => "-54.7152", "Y" => "-2.473", "ocorrencia" => " A05.VIAS D
 Pontos::create(["X" => "-54.71585", "Y" => "-2.47011", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Nova Republica", "setor" =>141]);
 Pontos::create(["X" => "-54.722", "Y" => "-2.4734", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Vitoria Regia", "setor" =>144]);
 Pontos::create(["X" => "-54.7192", "Y" => "-2.4728", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Vitoria Regia", "setor" =>144]);
-Pontos::create(["X" => "-54.7216", "Y" => "-2.473", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Vitoria Regia", "setor" =>144]);
 Pontos::create(["X" => "-54.7193", "Y" => "-2.4738", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Vitoria Regia", "setor" =>144]);
 Pontos::create(["X" => "-54.72231", "Y" => "-2.47163", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Vitoria Regia", "setor" =>144]);
 Pontos::create(["X" => "-54.7222", "Y" => "-2.4714", "ocorrencia" => " E08.TENTATIVA DE HOMICIDIO", "bairro" => "Vitoria Regia", "setor" =>144]);
@@ -224,8 +213,6 @@ Pontos::create(["X" => "-54.7043", "Y" => "-2.4394", "ocorrencia" => " D01.HOMIC
 Pontos::create(["X" => "-54.70432", "Y" => "-2.43935", "ocorrencia" => " D01.HOMICIDIO", "bairro" => "Santissimo", "setor" =>184]);
 Pontos::create(["X" => "-54.7002", "Y" => "-2.4336", "ocorrencia" => " D01.HOMICIDIO", "bairro" => "Santana", "setor" =>185]);
 Pontos::create(["X" => "-54.7001", "Y" => "-2.4344", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Santana", "setor" =>185]);
-Pontos::create(["X" => "-54.69848", "Y" => "-2.43576", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santana", "setor" =>185]);
-Pontos::create(["X" => "-54.69848", "Y" => "-2.43576", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santana", "setor" =>185]);
 Pontos::create(["X" => "-54.69948", "Y" => "-2.43626", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Santana", "setor" =>185]);
 Pontos::create(["X" => "-54.703", "Y" => "-2.4427", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Livramento", "setor" =>186]);
 Pontos::create(["X" => "-54.703", "Y" => "-2.4427", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Livramento", "setor" =>186]);
@@ -242,7 +229,6 @@ Pontos::create(["X" => "-54.69508", "Y" => "-2.44376", "ocorrencia" => " E04.MAU
 Pontos::create(["X" => "-54.6951", "Y" => "-2.44377", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Sao Jose Operario", "setor" =>189]);
 Pontos::create(["X" => "-54.69515", "Y" => "-2.44382", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Sao Jose Operario", "setor" =>189]);
 Pontos::create(["X" => "-54.69511", "Y" => "-2.44382", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Sao Jose Operario", "setor" =>189]);
-Pontos::create(["X" => "-54.6951", "Y" => "-2.44377", "ocorrencia" => " D02.MORTES A ESCLARECER", "bairro" => "Sao Jose Operario", "setor" =>189]);
 Pontos::create(["X" => "-54.69521", "Y" => "-2.44375", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Sao Jose Operario", "setor" =>189]);
 Pontos::create(["X" => "-54.69518", "Y" => "-2.44384", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Sao Jose Operario", "setor" =>189]);
 Pontos::create(["X" => "-54.69513", "Y" => "-2.44373", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Sao Jose Operario", "setor" =>189]);
@@ -262,7 +248,6 @@ Pontos::create(["X" => "-54.7023", "Y" => "-2.4477", "ocorrencia" => " E03.LESÕ
 Pontos::create(["X" => "-54.70216", "Y" => "-2.44754", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Diamantino", "setor" =>192]);
 Pontos::create(["X" => "-54.70228", "Y" => "-2.44793", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Diamantino", "setor" =>192]);
 Pontos::create(["X" => "-54.70229", "Y" => "-2.44791", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Diamantino", "setor" =>192]);
-Pontos::create(["X" => "-54.70222", "Y" => "-2.44797", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Diamantino", "setor" =>192]);
 Pontos::create(["X" => "-54.7028", "Y" => "-2.447", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Diamantino", "setor" =>192]);
 Pontos::create(["X" => "-54.70457", "Y" => "-2.45128", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Diamantino", "setor" =>192]);
 Pontos::create(["X" => "-54.7056", "Y" => "-2.4508", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Diamantino", "setor" =>193]);
@@ -274,9 +259,7 @@ Pontos::create(["X" => "-54.72876", "Y" => "-2.46116", "ocorrencia" => " E05.MAU
 Pontos::create(["X" => "-54.69757", "Y" => "-2.44867", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Sao Jose Operario", "setor" =>204]);
 Pontos::create(["X" => "-54.69703", "Y" => "-2.44658", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Sao Jose Operario", "setor" =>204]);
 Pontos::create(["X" => "-54.69721", "Y" => "-2.44766", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Sao Jose Operario", "setor" =>204]);
-Pontos::create(["X" => "-54.70246", "Y" => "-2.4461", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Livramento", "setor" =>205]);
 Pontos::create(["X" => "-54.6989", "Y" => "-2.4574", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Santo Andre", "setor" =>206]);
-Pontos::create(["X" => "-54.7039", "Y" => "-2.4597", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Santo Andre", "setor" =>206]);
 Pontos::create(["X" => "-54.7052", "Y" => "-2.4607", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Santo Andre", "setor" =>206]);
 Pontos::create(["X" => "-54.7009", "Y" => "-2.4575", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Santo Andre", "setor" =>206]);
 Pontos::create(["X" => "-54.70431", "Y" => "-2.45764", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Santo Andre", "setor" =>206]);
@@ -348,14 +331,12 @@ Pontos::create(["X" => "-54.679", "Y" => "-2.4616", "ocorrencia" => " H12.VIOLEN
 Pontos::create(["X" => "-54.6821", "Y" => "-2.4626", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Perola do Maica", "setor" =>222]);
 Pontos::create(["X" => "-54.6717", "Y" => "-2.464", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Perola do Maica", "setor" =>222]);
 Pontos::create(["X" => "-54.67419", "Y" => "-2.46156", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Perola do Maica", "setor" =>222]);
-Pontos::create(["X" => "-54.67439", "Y" => "-2.46145", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Perola do Maica", "setor" =>222]);
 Pontos::create(["X" => "-54.6859", "Y" => "-2.4605", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Jutai", "setor" =>224]);
 Pontos::create(["X" => "-54.691", "Y" => "-2.46", "ocorrencia" => " E08.TENTATIVA DE HOMICIDIO", "bairro" => "Jutai", "setor" =>224]);
 Pontos::create(["X" => "-54.6876", "Y" => "-2.4674", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Maica", "setor" =>225]);
 Pontos::create(["X" => "-54.6889", "Y" => "-2.4695", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Maica", "setor" =>225]);
 Pontos::create(["X" => "-54.68922", "Y" => "-2.47123", "ocorrencia" => " C03.ESTUPRO", "bairro" => "Maica", "setor" =>225]);
 Pontos::create(["X" => "-54.68753", "Y" => "-2.47009", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Maica", "setor" =>225]);
-Pontos::create(["X" => "-54.68745", "Y" => "-2.4699", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Maica", "setor" =>225]);
 Pontos::create(["X" => "-54.6899", "Y" => "-2.46844", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Maica", "setor" =>225]);
 Pontos::create(["X" => "-54.69059", "Y" => "-2.46795", "ocorrencia" => " I02.CONFLITO FAMILIAR", "bairro" => "Maica", "setor" =>225]);
 Pontos::create(["X" => "-54.68604", "Y" => "-2.47532", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Jaderlandia", "setor" =>226]);
@@ -406,12 +387,10 @@ Pontos::create(["X" => "-54.722", "Y" => "-2.4702", "ocorrencia" => " A05.VIAS D
 Pontos::create(["X" => "-54.7237", "Y" => "-2.4765", "ocorrencia" => " C03.ESTUPRO", "bairro" => "Vitoria Regia", "setor" =>236]);
 Pontos::create(["X" => "-54.72354", "Y" => "-2.47383", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Vitoria Regia", "setor" =>236]);
 Pontos::create(["X" => "-54.72029", "Y" => "-2.47539", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Vitoria Regia", "setor" =>236]);
-Pontos::create(["X" => "-54.7232", "Y" => "-2.47436", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Vitoria Regia", "setor" =>236]);
 Pontos::create(["X" => "-54.72234", "Y" => "-2.47356", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Vitoria Regia", "setor" =>236]);
 Pontos::create(["X" => "-54.72524", "Y" => "-2.47489", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Vitoria Regia", "setor" =>236]);
 Pontos::create(["X" => "-54.7163", "Y" => "-2.4793", "ocorrencia" => " E03.LESÕES CORPORAIS (EXCLUSIVE TRANSITO)", "bairro" => "Ipanema", "setor" =>240]);
 Pontos::create(["X" => "-54.7153", "Y" => "-2.4764", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Ipanema", "setor" =>240]);
-Pontos::create(["X" => "-54.7239", "Y" => "-2.4794", "ocorrencia" => " E06.OUTROS CRIMES CONTRA PESSOA SEM MORTE", "bairro" => "Ipanema", "setor" =>240]);
 Pontos::create(["X" => "-54.7168", "Y" => "-2.4766", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Ipanema", "setor" =>240]);
 Pontos::create(["X" => "-54.71288", "Y" => "-2.47685", "ocorrencia" => " H12.VIOLENCIA DOMESTICA E FAMILIAR CONTRA A MULHER", "bairro" => "Ipanema", "setor" =>240]);
 Pontos::create(["X" => "-54.7268", "Y" => "-2.486", "ocorrencia" => " A05.VIAS DE FATO/AGRESSÃO", "bairro" => "Ipanema", "setor" =>240]);
