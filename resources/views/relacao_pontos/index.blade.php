@@ -7,10 +7,20 @@
         </div>
     @else
         @if ($pontos != 0)
-            <form action="{{ route('relacoes_pontos.load') }}" method="post">
-                @csrf
-                <button type="submit" class="btn btn-block btn-primary">Carregar Relações</button>
-            </form>
+        <div class="row">
+            <div class="col">
+                <form action="{{ route('relacoes_pontos.load') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-block btn-primary">Carregar Relações</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{{ route('nivel_definido.load') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-block btn-info">Utilizar Niveis definidos</button>
+                </form>
+            </div>
+        </div>
         @else
         <div class="alert alert-warning" role="alert">
             <p>Necessario <a href="{{ route('inicio') }}">carregar os Pontos</a></p>

@@ -6,12 +6,10 @@ use App\Http\Requests\StorepontosRequest;
 use App\Http\Requests\UpdatepontosRequest;
 use App\Models\NivelRelacao;
 use App\Models\Pontos;
+use App\Models\RegistroPontosSetor;
 use App\Models\RelacaoPontos;
-use Database\Seeders\DatabaseSeeder;
-use Database\Seeders\PontosSeeder;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\DB;
+use Rap2hpoutre\FastExcel\FastExcel;
 
 class PontosController extends Controller
 {
@@ -27,6 +25,15 @@ class PontosController extends Controller
         // $relacoes = (RelacaoPontos::where('nivel_id', 0)->count() >= 0) ? 1 : 0;
         $ocorrencias = Pontos::distinct()->get('ocorrencia')->count();
         return view("pontos.index")->with(compact("pontos", 'relacoes', 'ocorrencias'));
+    }
+
+    public function downloadTabelaPontos()
+    {
+        ini_set("max_execution_time", 600);
+
+        $pontos = Pontos::all();
+
+        return (new FastExcel($pontos))->download('pontos_saude.xlsx');
     }
 
     /**
@@ -110,6 +117,7 @@ class PontosController extends Controller
         Pontos::truncate();
         RelacaoPontos::truncate();
         NivelRelacao::truncate();
+        RegistroPontosSetor::truncate();
         return redirect()->route("inicio")->with('success', "Tabelas apagadas com sucesso!");
     }
 

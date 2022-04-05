@@ -10,10 +10,16 @@
                         href="{{ route('relacoes_pontos.index') }}">classificação</a></p>
             @else
                 @if ($pontos->count() > 0)
-                    <form action="{{ route('pontos.alterar') }}" method="post">
-                        @csrf
-                        <button type="submit" class="btn btn-block btn-primary">Atualizar Pontos</button>
-                    </form>
+                <form action="{{ route('pontos.alterar') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-block btn-primary">Atualizar Pontos</button>
+                </form>
+                <p></p>
+                <form action="{{ route('download.pontos') }}" method="get">
+                    @csrf
+                    <button type="submit" class="btn btn-block btn-info">Download Tabela Pontos</button>
+                </form>
+
                 @else
                 <div class="alert alert-warning" role="alert">
                     <p>Necessario carregar a Tabela de pontos.<br/> Execute o seed ou carregue uma tabela</p>
