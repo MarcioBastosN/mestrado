@@ -48,7 +48,7 @@ class TabelaController extends Controller
         foreach ($setores as $setor) {
             $linha = array(
                 'setor' => $setor->setor,
-                'bairro' => $setor->bairro,
+                'bairro' => $pontos->where('setor', $setor->setor)->first()->bairro,
                 "X" => $pontos->where('setor', $setor->setor)->first()->X,
                 "Y" => $pontos->where('setor', $setor->setor)->first()->Y
             );
