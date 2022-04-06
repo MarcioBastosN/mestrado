@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th>setor</th>
+                <th>bairro</th>
                 <th>x</th>
                 <th>y</th>
                 @foreach ($niveis as $nivel)
@@ -23,6 +24,7 @@
             @foreach ($setores as $setor)
                 <tr>
                     <td>{{ $setor->setor }}</td>
+                    <td>{{ $setor->bairro }}</td>
                     <td>{{ $pontos->where('setor', $setor->setor)->first()->X }}</td>
                     <td>{{ $pontos->where('setor', $setor->setor)->first()->Y }}</td>
                     @php
