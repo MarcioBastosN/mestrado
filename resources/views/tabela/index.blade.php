@@ -12,10 +12,10 @@
             <tr>
                 <th>setor</th>
                 <th>bairro</th>
-                <th>x</th>
-                <th>y</th>
+                {{-- <th>x</th>
+                <th>y</th> --}}
                 @foreach ($niveis as $nivel)
-                    <th>Nivel -{{ $nivel->nivel }}</th>
+                    <th>Nivel-{{ $nivel->nivel }}</th>
                 @endforeach
                 <th>Indice de Violência</th>
             </tr>
@@ -25,8 +25,8 @@
                 <tr>
                     <td>{{ $setor->setor }}</td>
                     <td>{{ $pontos->where('setor', $setor->setor)->first()->bairro }}</td>
-                    <td>{{ $pontos->where('setor', $setor->setor)->first()->X }}</td>
-                    <td>{{ $pontos->where('setor', $setor->setor)->first()->Y }}</td>
+                    {{-- <td>{{ $pontos->where('setor', $setor->setor)->first()->X }}</td>
+                    <td>{{ $pontos->where('setor', $setor->setor)->first()->Y }}</td> --}}
                     @php
                         $soma = 0;
                     @endphp

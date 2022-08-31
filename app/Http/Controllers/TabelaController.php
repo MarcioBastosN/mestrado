@@ -49,8 +49,8 @@ class TabelaController extends Controller
             $linha = array(
                 'setor' => $setor->setor,
                 'bairro' => $pontos->where('setor', $setor->setor)->first()->bairro,
-                "X" => $pontos->where('setor', $setor->setor)->first()->X,
-                "Y" => $pontos->where('setor', $setor->setor)->first()->Y
+                "x" => $pontos->where('setor', $setor->setor)->first()->X,
+                "y" => $pontos->where('setor', $setor->setor)->first()->Y
             );
             $soma = 0;
             foreach ($niveis as $nivel) {
