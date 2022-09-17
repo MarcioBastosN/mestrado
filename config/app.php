@@ -180,6 +180,9 @@ return [
         // log
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
 
+        // audit
+        OwenIt\Auditing\AuditingServiceProvider::class,
+
     ],
 
     /*
