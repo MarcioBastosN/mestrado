@@ -49,7 +49,7 @@
                 <th>ocorrencia</th>
                 <th>bairro</th>
                 <th>setor</th>
-                <th>pontos</th>
+                <th>pesos</th>
             </tr>
         </thead>
         <tbody>
